@@ -1,0 +1,27 @@
+{
+  "name": "fullstack_be_0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congnc2408/nodejs-learning.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/congnc2408/nodejs-learning/issues"
+  },
+  "homepage": "https://github.com/congnc2408/nodejs-learning#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
