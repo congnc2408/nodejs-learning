@@ -1,21 +1,17 @@
 const express = require('express');
-const path = require('path');
+const configViewEngine = require('./config/viewEngine');
 const app = express();
+require('dotenv').config();
+const webRoutes = require('./routes/web');
+
 const port = process.env.PORT || 4200;
 const hostname = process.env.HOST_NAME;
-require('dotenv').config();
-
 
 console.log(">>> check env: ", process.env);
+//config template engine
+configViewEngine(app);
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('views engine', '/ejs');
-
-app.get('/anh_cong', (req, res) => {
-    //res.send('Hello world');
-    res.render('sample.ejs')
-});
-
-app.listen(port, () => {
-    console.log(`Exam app listening on port ${port}`);
+app.use('/', webRoutes);
+app.listen(port, hostname, () => {
+    console.log(`Exam app listening on ${hostname}:${port}`);
 });
