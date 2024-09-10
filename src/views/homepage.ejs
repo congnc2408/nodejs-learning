@@ -9,34 +9,31 @@
 
 <body>
     <div class="topnav">
-        <a class="active" href="">Home</a>
-        <a href="">News</a>
-        <a href="">Contact</a>
-        <a href="">About</a>
-    </div>
-    <div class="form-add-new">
-        <form action="create-user" method="post">
-            <fieldset>
-                <legend>Add new users</legend>
-                <div class="input-group">
-                    <label for="">email</label>
-                    <input type="text" id="emailId" name="email">
-                </div>
-                <div class="input-group">
-                    <label for="">name</label>
-                    <input type="text" id="myName" name="name">
-                </div>
-                <div class="input-group">
-                    <label for="">city</label>
-                    <input type="text" id="city" name="city">
-                </div>
-                <div class="">
-                    <button>Save</button>
-                </div>
+        <a class="active" href="/">Home</a>
+        <a href="/create">Create user</a>
 
-            </fieldset>
-        </form>
     </div>
+    <table class="custom-user-tb">
+        <%= JSON.stringify(userLst) %>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>city</th>
+                <th>action</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>nguyễn chí công</td>
+                <td>congnc2408@gmail.com</td>
+                <td>hà nam</td>
+                <td>
+                    <button class="button-makeup">edit</button>
+                    <button class="button-makeup">delete</button>
+                </td>
+            </tr>
+    </table>
+
 
 </body>
 
