@@ -14,24 +14,34 @@
 
     </div>
     <table class="custom-user-tb">
-        <%= JSON.stringify(userLst) %>
+
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>city</th>
+            <th>action</th>
+        </tr>
+        <% for(let i=0; i < userLst.length; i++ ) { %>
             <tr>
-                <th>id</th>
-                <th>name</th>
-                <th>email</th>
-                <th>city</th>
-                <th>action</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>nguyễn chí công</td>
-                <td>congnc2408@gmail.com</td>
-                <td>hà nam</td>
                 <td>
-                    <button class="button-makeup">edit</button>
+                    <%= userLst[i].id %>
+                </td>
+                <td>
+                    <%= userLst[i].name %>
+                </td>
+                <td>
+                    <%= userLst[i].email %>
+                </td>
+                <td>
+                    <%= userLst[i].city %>
+                </td>
+                <td>
+                    <a href="/edit/<%= userLst[i].id %>" class="button-makeup">edit</a>
                     <button class="button-makeup">delete</button>
                 </td>
             </tr>
+            <% } %>
     </table>
 
 

@@ -19,13 +19,13 @@ app.use('/', webRoutes);
 
 
 
-connection.query(
-    'select * from Users u',
-    function (err, results, fields) {
-        //console.log("result= ", results);
-        // console.log("field= ", fields);
-    }
-)
+// connection.query(
+//     'select * from Users u',
+//     function (err, results, fields) {
+//         //console.log("result= ", results);
+//         // console.log("field= ", fields);
+//     }
+// )
 
 
 
