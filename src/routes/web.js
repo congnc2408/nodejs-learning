@@ -5,7 +5,7 @@ const router = express.Router();
 router.get('/anh_cong', getHoiCong);
 router.get('/', getHomepage);
 router.get('/create', getCreatePage)
-router.get('/edit/:userId', getEditPage)
+router.get('/edit/:id', getEditPage)
 
 router.post('/create-user', postCreateUser);
 
